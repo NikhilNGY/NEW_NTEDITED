@@ -84,7 +84,7 @@ async def start_command(client: Client, message: Message):
                 pass
 
 
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<b>Bot se File {file_auto_delete} me Automatically delete ho jayega File nikalne ke baad forward kr ke rkh liya kro 🤖</b>")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b>Tʜɪs Fɪʟᴇ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ   {file_auto_delete} mins. Pʟᴇᴀsᴇ Sᴀᴠᴇ Oʀ Fᴏʀᴡᴀʀᴅ Iᴛ Tᴏ Yᴏᴜʀ Sᴀᴠᴇᴅ Mᴇssᴀɢᴇs Bᴇғᴏʀᴇ Iᴛ Gᴇᴛs Dᴇʟᴇᴛᴇᴅ. Tᴇᴀᴍ: @KR_Picture</b>")
 
         # Schedule the file deletion
         asyncio.create_task(delete_files(silentbots, client, k))
@@ -92,7 +92,7 @@ async def start_command(client: Client, message: Message):
         # for silentbot in silentbots: 
             # try:
                 # await silentbot.delete()
-                # await k.edit_text("Your Video / File Is Successfully Deleted ✅") 
+                # await k.edit_text("Yᴏᴜʀ Vɪᴅᴇᴏ / Fɪʟᴇ Iꜱ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ Dᴇʟᴇᴛᴇᴅ ✅. Tᴇᴀᴍ: @KR_Picture") 
             # except:    
                 # pass 
 
@@ -101,8 +101,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("● Aʙᴏᴜᴛ Mᴇ ●", callback_data = "about"),
+                    InlineKeyboardButton("● 🔒 Cʟᴏꜱᴇ ●", callback_data = "close")
                 ]
             ]
         )
@@ -130,14 +130,14 @@ async def start_command(client: Client, message: Message):
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="Join Channel", url=client.invitelink)
+            InlineKeyboardButton(text="●  Jᴏɪɴ Cʜᴀɴɴᴇʟ  ●", url=client.invitelink)
         ]
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = 'Try Again',
+                    text = '● ↻ Tʀʏ Aɢᴀɪɴ ●',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
@@ -229,4 +229,4 @@ async def delete_files(messages, client, k):
             await client.delete_messages(chat_id=msg.chat.id, message_ids=[msg.id])
         except Exception as e:
             print(f"The attempt to delete the media {msg.id} was unsuccessful: {e}")
-    await k.edit_text("Your Video / File Is Successfully Deleted ✅")
+    await k.edit_text(""Yᴏᴜʀ Vɪᴅᴇᴏ / Fɪʟᴇ Iꜱ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ Dᴇʟᴇᴛᴇᴅ ✅. Tᴇᴀᴍ: @KR_Picture")
