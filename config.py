@@ -4,27 +4,27 @@ from logging.handlers import RotatingFileHandler
 
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-API_ID = int(os.environ.get("API_ID", "16536417"))
-API_HASH = os.environ.get("API_HASH", "f6e58a549da642d7b765744a2f82c6d9")
+API_ID = int(os.environ.get("API_ID", "2468192"))
+API_HASH = os.environ.get("API_HASH", "4906b3f8f198ec0e24edb2c197677678")
 
 
 PORT = os.environ.get("PORT", "8080")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "100"))
 
 
-OWNER_ID = int(os.environ.get("OWNER_ID", "921365334"))
-DB_URL = os.environ.get("DB_URL", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DB_NAME", "tvshowtest1khhk")
+OWNER_ID = int(os.environ.get("OWNER_ID", "2068233407"))
+DB_URL = os.environ.get("DB_URL", "")
+DB_NAME = os.environ.get("DB_NAME", "Filter01")
 
 
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002137320449"))
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001683081282"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001951277428"))
 FILE_AUTO_DELETE = int(os.getenv("FILE_AUTO_DELETE", "1800")) # auto delete in seconds
 
 
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "6177102464 1571060413 974706111 1562935405 5103171472 5075494391 5446648312 5614964062 563896360 974706111 5103171472 1562935405 921365334 5614964062").split()):
+    for x in (os.environ.get("ADMINS", "2098589219 2068233407").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -38,11 +38,11 @@ DISABLE_CHANNEL_BUTTON = True if os.environ.get('DISABLE_CHANNEL_BUTTON', "True"
 
 BOT_STATS_TEXT = "<b>BOT UPTIME :</b>\n{uptime}"
 
-USER_REPLY_TEXT = "❌Don't Send Me Messages Directly I'm Only File Share Bot !"
+USER_REPLY_TEXT = "❌Dᴏɴ'ᴛ Sᴇɴᴅ Mᴇ Mᴇꜱꜱᴀɢᴇꜱ Dɪʀᴇᴄᴛʟʏ ɪ'ᴍ Oɴʟʏ Fɪʟᴇ Sʜᴀʀᴇ Bᴏᴛ ! \n \nRᴇQᴜᴇꜱᴛ Mᴏᴠɪᴇꜱ Hᴇʀᴇ: https://t.me/+x6OfRDdUPrUwZTZl"
 
-START_MSG = os.environ.get("START_MESSAGE", "Hello {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It From Special Link.")
+START_MSG = os.environ.get("START_MESSAGE", "Hᴇʟʟᴏ {mention} \n \nI Cᴀɴ Sᴛᴏʀᴇ Pʀɪᴠᴀᴛᴇ Fɪʟᴇꜱ Iɴ Sᴘᴇᴄɪꜰɪᴇᴅ Cʜᴀɴɴᴇʟ Aɴᴅ Oᴛʜᴇʀ Uꜱᴇʀꜱ Cᴀɴ Aᴄᴄᴇꜱꜱ Iᴛ Fʀᴏᴍ Sᴘᴇᴄɪᴀʟ Lɪɴᴋ. Tᴇᴀᴍ: @KR_Picture")
 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {mention}\n\n<b>You Need To Join In My Channel/Group To Use Me\n\nKindly Please Join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>ನಮಸ್ಕಾರ {mention} 🙏  ,\n \nಚಲನಚಿತ್ರವನ್ನು ಪಡೆಯಲು 'JOIN CHANNEL' ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಚಾನಲ್‌ನಲ್ಲಿ ಸೇರಿಕೊಳ್ಳಿ.\n \n────── • ◆ • ───────\n \nYou Need to Join My Channel to Receive the Movie file. CLICK HERE 👇👇</b>")
 
 ADMINS.append(OWNER_ID)
 
