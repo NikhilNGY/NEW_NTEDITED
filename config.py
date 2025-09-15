@@ -18,7 +18,7 @@ DB_NAME = os.environ.get("DB_NAME", "Filter01")
 
 
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001683081282"))
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001951277428"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001910769204"))
 FILE_AUTO_DELETE = int(os.getenv("FILE_AUTO_DELETE", "1800")) # auto delete in seconds
 
 
